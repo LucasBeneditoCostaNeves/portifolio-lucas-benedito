@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #FAFAF7;
+  --bg-raised: #FFFFFF;
+  --ink: #16181D;
+  --ink-soft: #4B4E57;
+  --muted: #80838C;
+  --line: #E5E3DC;
+  --accent: #0F6E5B;
+  --accent-soft: #E3F0EC;
+  --accent-deep: #0A4F41;
+  --warn: #B5562B;
+  --radius: 2px;
+
+  /* clamp typography */
+  --text-name: clamp(40px, 6.4vw, 76px);
+  --text-section-title: clamp(26px, 3.4vw, 34px);
+  --text-contact-headline: clamp(30px, 4vw, 42px);
+  --text-role-line: clamp(14px, 1.8vw, 17px);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-bg-raised: var(--bg-raised);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-deep: var(--accent-deep);
+  --color-warn: var(--warn);
+
+  --font-sans: var(--font-inter), sans-serif;
+  --font-heading: var(--font-space-grotesk), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+
+  --radius-DEFAULT: var(--radius);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
