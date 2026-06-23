@@ -6,18 +6,22 @@ interface FeaturedRecognitionCardProps {
   item: Recognition
 }
 
-export function FeaturedRecognitionCard({ item }: FeaturedRecognitionCardProps) {
+const cardClass = 'flex bg-bg-raised border border-line rounded-[var(--radius)] overflow-hidden'
+
+function CardContent({ item }: { item: Recognition }) {
   return (
-    <div className="flex bg-bg-raised border border-line rounded-[var(--radius)] overflow-hidden">
+    <>
       <div className="relative w-[38%] shrink-0 bg-line" style={{ minHeight: '320px' }}>
-        <Image src={item.image} alt={item.title} fill className="object-cover object-center" />
+        <Image
+          src={item.image}
+          alt={item.title}
+          fill
+          className={`object-cover object-center transition-transform duration-300${item.url ? ' group-hover:scale-105' : ''}`}
+        />
       </div>
       <div className="flex flex-col justify-center gap-5 p-8">
         {item.badge && <RecognitionBadge>{item.badge}</RecognitionBadge>}
-        <h3
-          className="font-heading font-semibold text-ink m-0 leading-[1.25]"
-          style={{ fontSize: '22px' }}
-        >
+        <h3 className="font-heading font-semibold text-ink m-0 leading-[1.25]" style={{ fontSize: '22px' }}>
           {item.title}
         </h3>
         {item.description && (
@@ -27,6 +31,22 @@ export function FeaturedRecognitionCard({ item }: FeaturedRecognitionCardProps) 
           — {item.company} · {item.year}
         </p>
       </div>
+    </>
+  )
+}
+
+export function FeaturedRecognitionCard({ item }: FeaturedRecognitionCardProps) {
+  if (item.url) {
+    return (
+      <a href={item.url} target="_blank" rel="noopener noreferrer" className={`group block no-underline text-inherit ${cardClass}`}>
+        <CardContent item={item} />
+      </a>
+    )
+  }
+
+  return (
+    <div className={cardClass}>
+      <CardContent item={item} />
     </div>
   )
 }

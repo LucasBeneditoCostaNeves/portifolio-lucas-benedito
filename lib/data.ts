@@ -168,10 +168,12 @@ export const RECOGNITIONS: Recognition[] = [
     badge: 'Destaque do Ano',
     title: 'Prêmio Destaques 2025',
     description:
-      'Reconhecido entre os profissionais mais impactantes do ano em evento anual da empresa — recebendo troféu no palco entre dezenas de colegas.',
+      // 'Reconhecido entre os profissionais mais impactantes do ano em evento anual da empresa, considerado o mais inovador — recebendo troféu no palco entre dezenas de colegas.',
+      'Escolhido o profissional mais inovador da empresa em 2025 — uma conquista celebrada no palco do evento anual, com troféu nas mãos e dezenas de colegas na plateia.',
     company: 'SIT TRADE - Ifollow',
-    image: 'https://drive.google.com/uc?export=view&id=1ZGxWgvVSMr6gV1Zp93zee-hv1DLcvOU5',
     year: '2025',
+    image: 'https://drive.google.com/uc?export=view&id=1ZGxWgvVSMr6gV1Zp93zee-hv1DLcvOU5',
+    url: 'https://drive.google.com/uc?export=view&id=1ZGxWgvVSMr6gV1Zp93zee-hv1DLcvOU5',
   },
   {
     id: 'reconhecimento-do-mes',
@@ -180,6 +182,7 @@ export const RECOGNITIONS: Recognition[] = [
     year: '2025',
     stars: 5,
     image: 'https://drive.google.com/uc?export=view&id=1Uz3O5lKTErn3NKIFVIhmpuKWMyaJ-8XD',
+    url: 'https://drive.google.com/uc?export=view&id=1Uz3O5lKTErn3NKIFVIhmpuKWMyaJ-8XD'
   },
   {
     id: 'destaques-ano-grupo',
@@ -188,6 +191,7 @@ export const RECOGNITIONS: Recognition[] = [
     year: '2025',
     badge: 'Destaques 2024',
     image: 'https://drive.google.com/uc?export=view&id=1V0YE-tRwWffH4_ZYmZ8Bu2G01b63Eaoz',
+    url: 'https://drive.google.com/uc?export=view&id=1V0YE-tRwWffH4_ZYmZ8Bu2G01b63Eaoz'
   },
   {
     id: 'reconhecimento-equipe-lucao-wd',
@@ -195,6 +199,7 @@ export const RECOGNITIONS: Recognition[] = [
     company: 'iFollow',
     year: '2024',
     image: 'https://drive.google.com/uc?export=view&id=19iGr8r5lHFHaF6MnFiz6BxaHTrrDgEME',
+    url: 'https://drive.google.com/uc?export=view&id=19iGr8r5lHFHaF6MnFiz6BxaHTrrDgEME',
   },
   {
     id: 'momento-premiacao',
@@ -203,6 +208,7 @@ export const RECOGNITIONS: Recognition[] = [
     year: '2024',
     badge: 'Destaques 2024',
     image: 'https://drive.google.com/uc?export=view&id=1x2YUA7sVVoiP8jXAgCqtgPI0kogbL7pC',
+    url: 'https://drive.google.com/uc?export=view&id=1x2YUA7sVVoiP8jXAgCqtgPI0kogbL7pC',
     objectFit: 'contain',
   },
 ]

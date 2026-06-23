@@ -66,4 +66,5 @@ export interface Recognition {
   featured?: boolean
   objectPosition?: string
   objectFit?: 'cover' | 'contain'
+  url?: string
 }

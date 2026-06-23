@@ -5,14 +5,20 @@ interface RecognitionCardProps {
   item: Recognition
 }
 
-export function RecognitionCard({ item }: RecognitionCardProps) {
+function CardContent({ item }: { item: Recognition }) {
   const meta = [item.company, item.year].join(' · ')
   const stars = item.stars ? '★'.repeat(item.stars) : null
 
   return (
-    <div className="bg-bg-raised border border-line rounded-[var(--radius)] overflow-hidden">
+    <>
       <div className="relative aspect-square w-full bg-line">
-        <Image src={item.image} alt={item.title} fill style={{ objectFit: item.objectFit ?? 'cover', objectPosition: item.objectPosition ?? 'center' }} />
+        <Image
+          src={item.image}
+          alt={item.title}
+          fill
+          className={`transition-transform duration-300${item.url ? ' group-hover:scale-105' : ''}`}
+          style={{ objectFit: item.objectFit ?? 'cover', objectPosition: item.objectPosition ?? 'center' }}
+        />
       </div>
       <div className="p-4">
         <p className="font-mono text-[12px] text-accent m-0 leading-none">
@@ -23,6 +29,24 @@ export function RecognitionCard({ item }: RecognitionCardProps) {
           {item.title}
         </h3>
       </div>
+    </>
+  )
+}
+
+const cardClass = 'bg-bg-raised border border-line rounded-[var(--radius)] overflow-hidden'
+
+export function RecognitionCard({ item }: RecognitionCardProps) {
+  if (item.url) {
+    return (
+      <a href={item.url} target="_blank" rel="noopener noreferrer" className={`group block no-underline text-inherit ${cardClass}`}>
+        <CardContent item={item} />
+      </a>
+    )
+  }
+
+  return (
+    <div className={cardClass}>
+      <CardContent item={item} />
     </div>
   )
 }
