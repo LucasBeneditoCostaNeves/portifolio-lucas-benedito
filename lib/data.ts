@@ -7,6 +7,7 @@ import type {
   Cert,
   ContactItem,
   NavLink,
+  Recognition,
 } from '@/types'
 
 export const NAV_LINKS: NavLink[] = [
@@ -14,6 +15,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: 'skills', href: '#skills' },
   { label: 'experiência', href: '#experiencia' },
   { label: 'formação', href: '#formacao' },
+  { label: 'reconhecimentos', href: '#reconhecimentos' },
 ]
 
 export const ABOUT_PARAGRAPHS: TextSegment[][] = [
@@ -156,6 +158,58 @@ export const CERTS: Cert[] = [
     title: 'Certificado Full Stack – Kenzie Academy Brasil',
     date: 'Julho 2023',
     url: 'https://drive.google.com/file/d/1G6stTKSnbBr4XeoeDSrTMk3ExBiRWiBB/view',
+  },
+]
+
+export const RECOGNITIONS: Recognition[] = [
+  {
+    id: 'premio-destaques-2024',
+    featured: true,
+    badge: 'Destaque do Ano',
+    title: 'Prêmio Destaques 2025',
+    description:
+      // 'Reconhecido entre os profissionais mais impactantes do ano em evento anual da empresa, considerado o mais inovador — recebendo troféu no palco entre dezenas de colegas.',
+      'Escolhido o profissional mais inovador da empresa em 2025 — uma conquista celebrada no palco do evento anual, com troféu nas mãos e dezenas de colegas na plateia.',
+    company: 'SIT TRADE - Ifollow',
+    year: '2025',
+    image: 'https://drive.google.com/uc?export=view&id=1ZGxWgvVSMr6gV1Zp93zee-hv1DLcvOU5',
+    url: 'https://drive.google.com/uc?export=view&id=1ZGxWgvVSMr6gV1Zp93zee-hv1DLcvOU5',
+  },
+  {
+    id: 'reconhecimento-do-mes',
+    title: 'Reconhecimento do Mês',
+    company: 'SIT TRADE',
+    year: '2025',
+    stars: 5,
+    image: 'https://drive.google.com/uc?export=view&id=1Uz3O5lKTErn3NKIFVIhmpuKWMyaJ-8XD',
+    url: 'https://drive.google.com/uc?export=view&id=1Uz3O5lKTErn3NKIFVIhmpuKWMyaJ-8XD'
+  },
+  {
+    id: 'destaques-ano-grupo',
+    title: 'Destaques do Ano — Grupo',
+    company: 'SIT TRADE',
+    year: '2025',
+    badge: 'Destaques 2024',
+    image: 'https://drive.google.com/uc?export=view&id=1V0YE-tRwWffH4_ZYmZ8Bu2G01b63Eaoz',
+    url: 'https://drive.google.com/uc?export=view&id=1V0YE-tRwWffH4_ZYmZ8Bu2G01b63Eaoz'
+  },
+  {
+    id: 'reconhecimento-equipe-lucao-wd',
+    title: 'Reconhecimento de Equipe — Lucão WD',
+    company: 'iFollow',
+    year: '2024',
+    image: 'https://drive.google.com/uc?export=view&id=19iGr8r5lHFHaF6MnFiz6BxaHTrrDgEME',
+    url: 'https://drive.google.com/uc?export=view&id=19iGr8r5lHFHaF6MnFiz6BxaHTrrDgEME',
+  },
+  {
+    id: 'momento-premiacao',
+    title: 'Momento da Premiação',
+    company: 'iFollow',
+    year: '2024',
+    badge: 'Destaques 2024',
+    image: 'https://drive.google.com/uc?export=view&id=1x2YUA7sVVoiP8jXAgCqtgPI0kogbL7pC',
+    url: 'https://drive.google.com/uc?export=view&id=1x2YUA7sVVoiP8jXAgCqtgPI0kogbL7pC',
+    objectFit: 'contain',
   },
 ]
 

@@ -53,3 +53,18 @@ export interface NavLink {
   label: string
   href: string
 }
+
+export interface Recognition {
+  id: string
+  title: string
+  description?: string
+  company: string
+  year: string
+  badge?: string
+  stars?: number
+  image: string
+  featured?: boolean
+  objectPosition?: string
+  objectFit?: 'cover' | 'contain'
+  url?: string
+}
