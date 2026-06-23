@@ -109,8 +109,7 @@ export function Hero() {
               className="font-heading font-bold text-ink leading-[0.98] tracking-[-0.035em] m-0"
               style={{ fontSize: 'var(--text-name)' }}
             >
-              {line1}
-              {!showLine2 && cursor}
+              <span className="whitespace-nowrap">{line1}{!showLine2 && cursor}</span>
               {showLine2 && (
                 <>
                   <br />
