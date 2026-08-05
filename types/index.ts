@@ -54,6 +54,27 @@ export interface NavLink {
   href: string
 }
 
+export interface PortfolioHighlight {
+  icon: string
+  text: string
+  boldParts: string[]
+}
+
+export interface PortfolioProject {
+  id: string
+  name: string
+  company: string
+  year: string
+  shortDesc: string
+  fullDesc: string
+  status: 'live' | 'wip'
+  stack: string[]
+  highlights: PortfolioHighlight[]
+  githubUrl?: string
+  demoUrl?: string
+  imageUrl?: string
+}
+
 export interface Recognition {
   id: string
   title: string

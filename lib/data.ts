@@ -8,6 +8,7 @@ import type {
   ContactItem,
   NavLink,
   Recognition,
+  PortfolioProject,
 } from '@/types'
 
 export const NAV_LINKS: NavLink[] = [
@@ -16,6 +17,70 @@ export const NAV_LINKS: NavLink[] = [
   { label: 'experiência', href: '#experiencia' },
   { label: 'formação', href: '#formacao' },
   { label: 'reconhecimentos', href: '#reconhecimentos' },
+  { label: 'projetos', href: '#projetos' },
+]
+
+export const PROJECTS: PortfolioProject[] = [
+  {
+    id: 'outsourcing',
+    name: 'Plataforma de Outsourcing',
+    company: 'iFollow',
+    year: '2024',
+    shortDesc:
+      'Plataforma completa para gestão de fornecedores, cashflow e área criativa com módulo financeiro automático.',
+    fullDesc:
+      'Plataforma completa desenvolvida do zero para gestão de outsourcing, contemplando módulos de cadastros, fornecedores, cashflow e área criativa. Gerencia o fluxo completo entre clientes, fornecedores e administradores.',
+    status: 'live',
+    stack: ['React.js', 'Next.js', 'TypeScript', 'NestJS', 'PostgreSQL', 'Docker', 'Git'],
+    highlights: [
+      {
+        icon: '⚡',
+        text: '+60% de eficiência no processo contábil com geração automática de notas fiscais e cálculo de impostos.',
+        boldParts: ['+60% de eficiência'],
+      },
+      {
+        icon: '🏗️',
+        text: 'Arquitetura modular e desacoplada permitindo manutenção independente de cada módulo.',
+        boldParts: ['modular e desacoplada'],
+      },
+      {
+        icon: '💸',
+        text: 'Módulo financeiro integrado com cálculo automático de impostos e eliminação de retrabalho contábil.',
+        boldParts: ['cálculo automático de impostos'],
+      },
+    ],
+    githubUrl: undefined,
+  },
+  {
+    id: 'rastreabilidade',
+    name: 'Rastreabilidade de Mercadorias',
+    company: 'iFollow',
+    year: '2024',
+    shortDesc:
+      'Sistema de rastreamento de +2.000 dispositivos com sincronização a cada 15 minutos via filas de mensageria.',
+    fullDesc:
+      'Sistema de rastreamento em tempo real que integra APIs externas de localização, sincronizando dados de mais de 2.000 dispositivos a cada 15 minutos. Arquitetura desacoplada com Clean Architecture e Single Responsibility.',
+    status: 'live',
+    stack: ['Node.js', 'NestJS', 'TypeScript', 'RabbitMQ', 'n8n', 'MySQL', 'Docker'],
+    highlights: [
+      {
+        icon: '📡',
+        text: 'Sincronização de +2.000 dispositivos a cada 15 minutos via cron jobs automatizados.',
+        boldParts: ['+2.000 dispositivos'],
+      },
+      {
+        icon: '🔁',
+        text: 'Filas de mensageria com RabbitMQ e n8n para processamento assíncrono e resiliente.',
+        boldParts: ['RabbitMQ e n8n'],
+      },
+      {
+        icon: '🏛️',
+        text: 'Lógica desacoplada em API independente aplicando Clean Architecture e Single Responsibility.',
+        boldParts: ['API independente'],
+      },
+    ],
+    githubUrl: undefined,
+  },
 ]
 
 export const ABOUT_PARAGRAPHS: TextSegment[][] = [
@@ -171,7 +236,7 @@ export const RECOGNITIONS: Recognition[] = [
       // 'Reconhecido entre os profissionais mais impactantes do ano em evento anual da empresa, considerado o mais inovador — recebendo troféu no palco entre dezenas de colegas.',
       'Escolhido o profissional mais inovador da empresa em 2025 — uma conquista celebrada no palco do evento anual, com troféu nas mãos e dezenas de colegas na plateia.',
     company: 'SIT TRADE - Ifollow',
-    year: '2025',
+    year: '2024',
     image: 'https://drive.google.com/uc?export=view&id=1ZGxWgvVSMr6gV1Zp93zee-hv1DLcvOU5',
     url: 'https://drive.google.com/uc?export=view&id=1ZGxWgvVSMr6gV1Zp93zee-hv1DLcvOU5',
   },
@@ -179,7 +244,7 @@ export const RECOGNITIONS: Recognition[] = [
     id: 'reconhecimento-do-mes',
     title: 'Reconhecimento do Mês',
     company: 'SIT TRADE',
-    year: '2025',
+    year: '2024',
     stars: 5,
     image: 'https://drive.google.com/uc?export=view&id=1Uz3O5lKTErn3NKIFVIhmpuKWMyaJ-8XD',
     url: 'https://drive.google.com/uc?export=view&id=1Uz3O5lKTErn3NKIFVIhmpuKWMyaJ-8XD'
@@ -188,14 +253,14 @@ export const RECOGNITIONS: Recognition[] = [
     id: 'destaques-ano-grupo',
     title: 'Destaques do Ano — Grupo',
     company: 'SIT TRADE',
-    year: '2025',
+    year: '2024',
     badge: 'Destaques 2024',
     image: 'https://drive.google.com/uc?export=view&id=1V0YE-tRwWffH4_ZYmZ8Bu2G01b63Eaoz',
     url: 'https://drive.google.com/uc?export=view&id=1V0YE-tRwWffH4_ZYmZ8Bu2G01b63Eaoz'
   },
   {
     id: 'reconhecimento-equipe-lucao-wd',
-    title: 'Reconhecimento de Equipe — Lucão WD',
+    title: 'Reconhecimento de Equipe - Semestre',
     company: 'iFollow',
     year: '2024',
     image: 'https://drive.google.com/uc?export=view&id=19iGr8r5lHFHaF6MnFiz6BxaHTrrDgEME',
@@ -203,7 +268,7 @@ export const RECOGNITIONS: Recognition[] = [
   },
   {
     id: 'momento-premiacao',
-    title: 'Momento da Premiação',
+    title: 'Reconhecimento do mês',
     company: 'iFollow',
     year: '2024',
     badge: 'Destaques 2024',
