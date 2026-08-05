@@ -280,7 +280,7 @@ export const RECOGNITIONS: Recognition[] = [
 
 export const CONTACT_LINKS: ContactItem[] = [
   { label: 'lucasbene03@gmail.com', href: 'mailto:lucasbene03@gmail.com' },
-  { label: '(11) 97677-9251', href: 'tel:+5511976779251' },
+  { label: '(11) 97677-9251', href: 'https://wa.me/5511976779251' },
   {
     label: 'linkedin.com/in/lucas-benedito-costa-neves',
     href: 'https://www.linkedin.com/in/lucas-benedito-costa-neves-6a0102246/',
