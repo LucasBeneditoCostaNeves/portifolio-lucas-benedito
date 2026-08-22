@@ -14,7 +14,7 @@ export function Button({ variant, href, children, target, rel }: ButtonProps) {
 
   const styles = {
     primary:
-      `${base} bg-ink text-bg border border-ink hover:bg-accent-deep hover:border-accent-deep`,
+      `${base} bg-[var(--accent)] text-[var(--bg)] border border-[var(--accent)] hover:bg-accent-deep hover:border-accent-deep`,
     ghost:
       `${base} border border-line text-ink hover:border-ink`,
   }
